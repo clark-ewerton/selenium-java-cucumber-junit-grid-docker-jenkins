@@ -1,5 +1,5 @@
 #language: pt
-Funcionalidade: Realizar compras no site de e-commerce
+Funcionalidade: Realizar compras no site de e-commerce parte 2
 
   Cenario: voltar pagina inicial
     Dado que retorno para pagina inicial

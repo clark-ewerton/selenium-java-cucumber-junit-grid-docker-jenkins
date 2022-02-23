@@ -17,26 +17,13 @@ pipeline{
 				bat 'mvn verify -Dthreads=8'
             }
 			}
-			
-			stage ('Cucumber Reports') {
-
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'target'
-
-            }
-
-        }
 	
 }
 
 	
 
 post {
-    always {
-	junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-		
+    always {	
         cucumber buildStatus: 'UNSTABLE',
                 failedFeaturesNumber: 1,
                 failedScenariosNumber: 1,
