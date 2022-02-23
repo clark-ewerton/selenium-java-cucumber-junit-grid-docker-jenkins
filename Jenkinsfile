@@ -11,6 +11,12 @@ pipeline{
 				bat 'docker-compose up -d --scale chrome=2'
             }
 			}
+			
+	  stage('Rodar testes funcionais em paralelo'){
+            steps{
+				bat 'verify -Dthreads=8'
+            }
+			}
 }
 }
 
