@@ -148,7 +148,4 @@ without have a lot of properties inside a single file.
 
 ### Pipeline as a code
 
-The two files of the pipeline as a code are inside `pipeline_as_code` folder.
-
-* GitHub Actions to use it inside the GitHub located at `.github\workflows`
 * Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline located at `pipeline_as_code`
