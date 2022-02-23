@@ -3,7 +3,7 @@
 For this project, it was took into account the Windows as main environment!
 
 Local testing execution example
-![Local testing execution example](example_filed_test_with_report.gif)
+![Local testing execution example](example_local_testing_execution.gif)
 
 Parallel testing execution example with Docker Selenium
 ![Parallel testing execution example with Docker Selenium](selenium-grid-execution.gif)
