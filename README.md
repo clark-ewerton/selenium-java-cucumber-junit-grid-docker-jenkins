@@ -20,6 +20,8 @@ This project using the following languages and frameworks:
 * [WebDriverManager](https://github.com/bonigarcia/webdrivermanager) as the Selenium binaries management
 * [Owner](http://owner.aeonbits.org/) to minimize the code to handle the properties file
 * [Cucable Plugin](https://github.com/trivago/cucable-plugin) to run Cucumber Scenarios in Parallel with Maven
+* [Maven](https://maven.apache.org/) as the Java build tool
+* [Eclipse](https://www.eclipse.org/) as the IDE
 
 
 ## Test architecture
