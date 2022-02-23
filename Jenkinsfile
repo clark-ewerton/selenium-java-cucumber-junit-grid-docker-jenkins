@@ -24,6 +24,9 @@ pipeline{
 
 post {
     always {
+	junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml
+		 followSymlinks: false, onlyIfSuccessful: true
+		
         cucumber buildStatus: 'UNSTABLE',
                 failedFeaturesNumber: 1,
                 failedScenariosNumber: 1,
@@ -34,10 +37,10 @@ post {
                         [key: 'Submitter', value: 'Clark Ewerton']
                 ],
                 reportTitle: 'My report',
-                fileIncludePattern: 'json/*.json',
+                fileIncludePattern: '**/*.json',
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100,
-				jsonReportDirectory: 'json'
+				jsonReportDirectory: 'target'
     }
 }
 }
