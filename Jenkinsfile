@@ -30,11 +30,11 @@ post {
                 skippedStepsNumber: 1,
                 failedStepsNumber: 1,
                 classifications: [
-                        [key: 'Commit', value: '<a href="${GERRIT_CHANGE_URL}">${GERRIT_PATCHSET_REVISION}</a>'],
-                        [key: 'Submitter', value: '${GERRIT_PATCHSET_UPLOADER_NAME}']
+                        [key: 'Commit', value: '<a href="Clark Ewerton">Clark Ewerton</a>'],
+                        [key: 'Submitter', value: 'Clark Ewerton']
                 ],
                 reportTitle: 'My report',
-                fileIncludePattern: '**/*.json',
+                fileIncludePattern: 'json/*.json',
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100,
 				jsonReportDirectory: 'target'
