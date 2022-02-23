@@ -14,7 +14,7 @@ pipeline{
 			
 	  stage('Rodar testes funcionais em paralelo'){
             steps{
-				bat 'verify -Dthreads=8'
+				bat 'mvn verify -Dthreads=8'
             }
 			}
 }
