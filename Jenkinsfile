@@ -37,7 +37,7 @@ post {
                 fileIncludePattern: 'json/*.json',
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100,
-				jsonReportDirectory: 'target'
+				jsonReportDirectory: 'json'
     }
 }
 }
