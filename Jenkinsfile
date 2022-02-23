@@ -17,23 +17,6 @@ pipeline{
 				bat 'mvn verify -Dthreads=8'
             }
 			}
-			
-			stage('Gerar relatorio testes funcionais'){
-				node{
-	  stage('Generate Cucumber HTML report') {
-        cucumber buildStatus: 'UNSTABLE',
-                reportTitle: 'My report',
-                fileIncludePattern: '**/*.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'Browser',
-                        'value': 'Chrome'
-                    ]
-                ]
-    }
-	}
-	}
 	
 }
 
