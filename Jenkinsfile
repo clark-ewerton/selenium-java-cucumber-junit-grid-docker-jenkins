@@ -25,7 +25,6 @@ pipeline{
 post {
     always {
 	junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-		 followSymlinks: false, onlyIfSuccessful: true
 		
         cucumber buildStatus: 'UNSTABLE',
                 failedFeaturesNumber: 1,
