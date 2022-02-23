@@ -5,6 +5,9 @@ For this project, it was took into account the Windows as main environment!
 Local testing execution example
 ![Local testing execution example](example_local_testing_execution.gif)
 
+Cucumber Report being generated after the test execution above
+![Local testing execution example](cucumber_report.gif)
+
 Parallel testing execution example with Docker Selenium
 ![Parallel testing execution example with Docker Selenium](selenium-grid-execution.gif)
 
