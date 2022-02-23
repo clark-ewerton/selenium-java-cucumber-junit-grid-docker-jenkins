@@ -1,4 +1,4 @@
-# Project to demonstrate knowledge in tools such as Selenium + Java + Cucumber + Junit + Docker + Grid (Parallel Testing) + Jenkins + Report
+# Project to demonstrate knowledge in tools such as Selenium + Java + Cucumber + Junit + Docker + Grid (Parallel Testing) + Jenkins + Cucumber Report
 
 For this project, it was took into account the Windows as main environment!
 
