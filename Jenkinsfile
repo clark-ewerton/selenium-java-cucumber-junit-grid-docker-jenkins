@@ -17,7 +17,10 @@ pipeline{
 				bat 'mvn verify -Dthreads=8'
             }
 			}
-			
+	
+}
+
+		node{
 	  stage('Generate Cucumber HTML report') {
         cucumber buildStatus: 'UNSTABLE',
                 reportTitle: 'My report',
@@ -30,7 +33,7 @@ pipeline{
                     ]
                 ]
     }
-}
+	}
 
 post {
     always {
