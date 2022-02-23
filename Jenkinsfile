@@ -8,7 +8,7 @@ pipeline{
 			}
  	  stage('Subir Selenium Grid com Dois Nodes em Chrome'){
             steps{
-                bat 'grid/'
+                bat 'cd grid'
 				bat 'docker-compose up -d --scale chrome=2'
             }
 			}
