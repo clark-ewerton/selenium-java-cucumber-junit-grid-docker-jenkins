@@ -98,7 +98,7 @@ The 'Step Classes' itself only calls the methods of Page Object Classes.
 The pre-condition uses `@BeforeClass` from JUnit creates the browser instance based on the values passed either local or remote execution.
 The post-condition uses `@AfterClass` to close the browser instance.
 
-Another way to run it, its through Maven based on command: 'mvn tests'
+Another way to run it, its through Maven based on command: `mvn tests`
 
 ### Parallel execution
 The parallel test execution is based on plugin [cucable](https://github.com/trivago/cucable-plugin).
@@ -112,7 +112,8 @@ As it's designed to Cucumber, to operate correctly, make sure to add to your pom
 In 'cucable-plugin', make sure to point to the correct directory that evidences the 'features' as well as to create the class 'CucableJavaTemplate' that will manage all the logic behind the parallel execution.
 
 On this way, to execute the tests in parallel mode, use the command bellow in Maven:
-verify -Dthreads=8 (As threads is passed by a parameter to maven-failsafe-plugin. Also 8 is the maximmum number of threads that you can do open locally to execute the tests at the same time).
+
+`verify -Dthreads=8` (As threads is passed by a parameter to maven-failsafe-plugin. Also 8 is the maximmum number of threads that you can do open locally to execute the tests at the same time).
 
 
 #### Execution with Docker Selenium Distributed
@@ -124,7 +125,7 @@ Please not you need the following before run it in parallel:
 * Start the Grid running the following command as for example:
   * `docker-compose up -d --scale chrome=2` 
 
-In the case above, to see in fact the concept of parallel testing working on your machine locally, it would create 2 nodes (machines) - each one with a instance of a chrome - and both will be used.
+In the case above, to see in fact the concept of parallel testing working on your machine locally, it creates 2 nodes (machines) - each one with a instance of a chrome - and both will be used.
 
 ### Configuration files
 This project uses a library called [Owner](http://owner.aeonbits.org/). You can find the class related to the property 
