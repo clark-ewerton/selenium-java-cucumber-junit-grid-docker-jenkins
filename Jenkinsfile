@@ -17,6 +17,17 @@ pipeline{
 				bat 'mvn verify -Dthreads=8'
             }
 			}
+			
+			stage ('Cucumber Reports') {
+
+            steps {
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "**/cucumber.json",
+                    jsonReportDirectory: 'target'
+
+            }
+
+        }
 	
 }
 
@@ -39,7 +50,7 @@ post {
                 fileIncludePattern: '**/*.json',
                 sortingMethod: 'ALPHABETICAL',
                 trendsLimit: 100,
-				jsonReportDirectory: 'target'
+				jsonReportDirectory: 'json'
     }
 }
 }
