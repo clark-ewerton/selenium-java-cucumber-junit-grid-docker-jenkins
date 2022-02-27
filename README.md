@@ -148,4 +148,4 @@ without have a lot of properties inside a single file.
 
 ### Pipeline as a code
 
-* Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline located at `pipeline_as_code`
+* Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline.
