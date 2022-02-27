@@ -50,11 +50,16 @@ public class AbstractPageObject {
 		procurarElemento(elemento).sendKeys(texto);
 	}
 
-	public void esperaElementoParaInteragir(By locator) {
-		Duration tempo = Duration.ofSeconds(2, 1);
+	public Boolean esperaElementoParaInteragir(By locator) {
+		Boolean elementExists = false;
+		Duration tempo = Duration.ofSeconds(10, 10);
 		wait = new WebDriverWait(DriverManager.getDriver(), tempo);
-		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-		wait.until(ExpectedConditions.visibilityOf(procurarElemento(locator)));
+		// wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		if (wait.until(ExpectedConditions.elementToBeClickable(locator)).isDisplayed()) {
+			elementExists = true;
+		}
+
+		return elementExists;
 
 	}
 }

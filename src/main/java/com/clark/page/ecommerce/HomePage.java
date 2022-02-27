@@ -2,6 +2,7 @@ package com.clark.page.ecommerce;
 
 import java.util.List;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -32,20 +33,20 @@ public class HomePage extends AbstractPageObject {
 
 	}
 
-	public void deveAdicionarProdutosComDescontoCarrinhoDeCompras() throws InterruptedException {
+	public void deveAdicionarProdutosCarrinhoDeCompras() {
 		for (WebElement item : webEleList) {
-			item.findElement(By.xpath("../..//a[@title='Add to cart']")).click();
-			procurarElemento(By.xpath("//span[@title='Close window']")).click();
-		}
-	}
+			try {
+				if (esperaElementoParaInteragir(By.xpath("//div//ul[@id='homefeatured']//div[@class='right-block']"))) {
+					item.findElement(By.xpath("../..//a[@title='Add to cart']")).click();
+					procurarElemento(By.xpath("//span[@title='Close window']")).click();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+				Assert.fail("It wasn't possible to locate element");
+			}
 
-	public void deveAdicionarTodosProdutosCarrinhoDeCompras() throws InterruptedException {
-		for (WebElement item : webEleList) {
-			item.findElement(By.xpath("../..//a[@title='Add to cart']")).click();
-			procurarElemento(By.xpath("//span[@title='Close window']")).click();
-			Thread.sleep(1000);
-
 		}
+
 	}
 
 	public void deveClicarPaginaInicial() {

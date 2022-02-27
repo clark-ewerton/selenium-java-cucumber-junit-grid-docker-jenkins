@@ -21,12 +21,12 @@ public class Home_Steps {
 
 	@Quando("^adicionar no carrinho de compras todos os produtos$")
 	public void adicionar_no_carrinho_de_compras() throws Throwable {
-		home.deveAdicionarTodosProdutosCarrinhoDeCompras();
+		home.deveAdicionarProdutosCarrinhoDeCompras();
 	}
 
 	@Quando("^adicionar no carrinho de compras os produtos com desconto$")
 	public void adicionar_no_carrinho_de_compras_com_desconto() throws Throwable {
-		home.deveAdicionarProdutosComDescontoCarrinhoDeCompras();
+		home.deveAdicionarProdutosCarrinhoDeCompras();
 	}
 
 }

@@ -28,9 +28,9 @@ public class CucumberRunnerTest {
         DriverManager.setDriver(driver);
 
         DriverManager.getDriver().get(configuration().url());
-        
+                
     }
-
+	
     @AfterClass
     public static void postCondition() {
         DriverManager.quit();
