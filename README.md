@@ -12,7 +12,7 @@ Parallel testing execution example with Docker Selenium
 ![Parallel testing execution example with Docker Selenium](selenium-grid-execution.gif)
 
 ## Project Structure
-
+```bash
 selenium-java-cucumber-junit-grid-docker-jenkins/
 ├─ src/
 │  ├─ main/
