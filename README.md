@@ -1,6 +1,6 @@
 # Project to demonstrate knowledge in tools such as Selenium + Java + Cucumber + Junit + Docker + Grid (Parallel Testing) + Jenkins + Cucumber Report
 
-For this project, it was took into account the Windows as main environment!
+For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: http://automationpractice.com/index.php
 
 Local testing execution example
 ![Local testing execution example](example_local_testing_execution.gif)
@@ -35,6 +35,7 @@ You will see the following items in this architecture:
 * [Page Objects pattern](#page-objects-pattern)
 * [Execution types](#execution-types)
 * [Configuration files](#configuration-files)
+* [Logging](#logging)
 * [Sequential execution](#sequential-execution)
 * [Parallel execution](#parallel-execution)
 * [Pipeline as a code](#pipeline-as-a-code)
@@ -91,9 +92,10 @@ You can see that the `createDriver()` method used the `getOptions()` to use spec
 The `getOptions()` is also used for the remote execution as it is a subclass of the `AbstractDriverOptions` and can be 
 automatically accepted as either a `Capabilities` or `MutableCapabilities` class, which is required by the `RemoteWebDriver` class.
 
-#### DriverManager class
-The class [DriverManager](https://github.com/eliasnogueira/selenium-java-lean-test-achitecture/blob/master/src/main/java/com/eliasnogueira/driver/DriverManager.java) 
-create a `ThreadLocal` for the WebDriver instance, to make sure there's no conflict when we run it in parallel.
+#### Logging
+All the log is done by the Log4J using the @Log4j2 annotation.
+
+The log4j2.properties has two strategies: console and file. A file with all the log information will be automatically created on the user folder with test_automation.log filename. If you want to change it, update the appender.file.fileName property value.
 
 ### Sequential execution
 If you want to execute your selenium web tests in a stardand way, all you have to do is to run the class 'CucumberRunnerTest' as 'JUnit Tests'. This class implements the calling to Cucumber Plugin and its 'Steps Classes'. Moreover, has the pre (setup) and post (teardown) conditions. 
