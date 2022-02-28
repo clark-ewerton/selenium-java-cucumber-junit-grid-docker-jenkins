@@ -34,8 +34,6 @@ selenium-java-cucumber-junit-grid-docker-jenkins/
 │  │  │  │  │  │  │  │  ├─ HomePage.java
 │  │  │  │  │  │  │  │  ├─ CarrinhoComprasPage.java
 │  │  │  │  │  │  │  ├─ AbstractPageObject.java
-│  │  │  │  │  │  ├─ report/
-│  │  │  │  │  │  │  ├─ ReportManager.java
 │  │  ├─ resources/
 │  │  │  ├─ log4j2.properties
 │  ├─ test/
