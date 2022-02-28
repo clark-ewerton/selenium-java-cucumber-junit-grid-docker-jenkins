@@ -124,7 +124,7 @@ On this way, to execute the tests in parallel mode, use the command bellow in Ma
 
 
 #### Screenshots
-After the test's execution, if there's an error in some scenario, so all the screenshots's images will be logged on "Screenshots" directory of the project.
+After the test's execution, if there's an error in any scenario, all the screenshots's images related to that one will be saved on "Screenshots" directory of the project. The login behind this is on `"Hooks" step class`.
 
 
 #### Execution with Docker Selenium Distributed
