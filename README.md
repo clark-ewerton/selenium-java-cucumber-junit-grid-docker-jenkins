@@ -12,72 +12,56 @@ Parallel testing execution example with Docker Selenium
 ![Parallel testing execution example with Docker Selenium](selenium-grid-execution.gif)
 
 ## Project Structure
-```bash
-selenium-test-automation-boilerplate/
-├─ .github/
-│  ├─ workflows/
-│  │  ├─ test-execution.yml
-├─ gradle/
-│  ├─ wrapper/
-│  │  ├─ gradle-wrapper.jar
-│  │  ├─ gradle-wrapper.properties
-├─ report/
-│  ├─ screenshot/
-├─ script/
-│  ├─ install_chrome.sh
+
+selenium-java-cucumber-junit-grid-docker-jenkins/
 ├─ src/
 │  ├─ main/
 │  │  ├─ java/
-│  │  │  ├─ io/
-│  │  │  │  ├─ github/
-│  │  │  │  │  ├─ tahanima/
+│  │  │  ├─ com/
+│  │  │  │  │  ├─ clark/
 │  │  │  │  │  │  ├─ config/
 │  │  │  │  │  │  │  ├─ Configuration.java
 │  │  │  │  │  │  │  ├─ ConfigurationManager.java
-│  │  │  │  │  │  │  ├─ package-info.java
-│  │  │  │  │  │  ├─ data/
-│  │  │  │  │  │  │  ├─ login/
-│  │  │  │  │  │  │  │  ├─ LoginData.java
-│  │  │  │  │  │  │  ├─ BaseData.java
-│  │  │  │  │  │  │  ├─ package-info.java
 │  │  │  │  │  │  ├─ driver/
 │  │  │  │  │  │  │  ├─ BrowserFactory.java
 │  │  │  │  │  │  │  ├─ DriverManager.java
-│  │  │  │  │  │  │  ├─ package-info.java
+│  │  │  │  │  │  │  ├─ TargetFactory.java
+│  │  │  │  │  │  ├─ exceptions/
+│  │  │  │  │  │  │  ├─ HeadlessNotSupportedException.java
+│  │  │  │  │  │  │  ├─ TargetNotValidException.java
 │  │  │  │  │  │  ├─ page/
-│  │  │  │  │  │  │  ├─ login/
-│  │  │  │  │  │  │  │  ├─ LoginPage.java
-│  │  │  │  │  │  │  ├─ product/
-│  │  │  │  │  │  │  │  ├─ ProductsPage.java
-│  │  │  │  │  │  │  ├─ BasePage.java
-│  │  │  │  │  │  │  ├─ BasePageFactory.java
-│  │  │  │  │  │  │  ├─ package-info.java.java
+│  │  │  │  │  │  │  ├─ ecommerce/
+│  │  │  │  │  │  │  │  ├─ HomePage.java
+│  │  │  │  │  │  │  │  ├─ CarrinhoComprasPage.java
+│  │  │  │  │  │  │  ├─ AbstractPageObject.java
 │  │  │  │  │  │  ├─ report/
 │  │  │  │  │  │  │  ├─ ReportManager.java
-│  │  │  │  │  │  │  ├─ package-info.java
 │  │  ├─ resources/
-│  │  │  ├─ general.properties
+│  │  │  ├─ log4j2.properties
 │  ├─ test/
 │  │  ├─ java/
-│  │  │  ├─ io/
-│  │  │  │  ├─ github/
-│  │  │  │  │  ├─ tahanima/
-│  │  │  │  │  │  ├─ login/
-│  │  │  │  │  │  │  ├─ LoginTest.java
-│  │  │  │  │  │  ├─ util/
-│  │  │  │  │  │  │  ├─ DataProviderUtil.java
-│  │  │  │  │  │  ├─ BaseTest.java
-│  │  │  │  │  │  ├─ TestListener.java
+│  │  │  ├─ com/
+│  │  │  │  ├─ clark/
+│  │  │  │  │  │  ├─ runner/
+│  │  │  │  │  │  │  ├─ parallel
+│  │  │  │  │  │  │  |  ├─ CucableJavaTemplate.java
+│  │  │  │  │  │  │  ├─ CucumberRunnerTest.java
+│  │  │  │  │  │  ├─ stepDefinitions/
+│  │  │  │  │  │  │  ├─ CarrinhoCompras_Steps.java
+│  │  │  │  │  │  │  ├─ Home_Steps.java
+│  │  │  │  │  │  │  ├─ Hooks.java
 │  │  ├─ resources/
-│  │  │  ├─ testData/
-│  │  │  │  ├─ login/
-│  │  │  │  │  ├─ login.csv
+│  │  │  ├─ features/
+│  │  │  │  ├─ eCommerceScenarios.feature
+│  │  │  │  ├─ eCommerceScenarios2.feature
+│  │  │  ├─ general.properties
+│  │  │  ├─ grid.properties
+│  │  │  ├─ local.properties
 ├─ .gitignore
-├─ build.gradle
-├─ gradlew
-├─ gradlew.bat
+├─ docker-compose.yml
+├─ Jenkinsfile
+├─ pom.xml
 ├─ README.md
-├─ settings.gradle
 ```
 
 ## Languages and Frameworks
