@@ -9,15 +9,15 @@ import org.openqa.selenium.WebDriver;
 import com.clark.driver.DriverManager;
 import com.clark.driver.TargetFactory;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"com.clark.stepDefinitions"},
-        tags = "not @ignore",
-        		plugin = { "pretty", "json:json/cucumber.json", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+        tags = {"~@ignore"},
+        		plugin = { "pretty", "json:json/cucumber.json"}
         )
 public class CucumberRunnerTest {
 	

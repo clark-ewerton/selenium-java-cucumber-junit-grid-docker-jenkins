@@ -73,3 +73,14 @@
 /target/test-classes/stepDefinitions/CarrinhoCompras_Steps.class
 /target/test-classes/stepDefinitions/DriverFactory.class
 /target/test-classes/stepDefinitions/Home_Steps.class
+/ScreenShots/realizar compras de todos os produtos.png
+/json/cucumber.json
+/target/classes/META-INF/MANIFEST.MF
+/target/classes/META-INF/maven/com.clark/com.clark/pom.properties
+/target/classes/META-INF/maven/com.clark/com.clark/pom.xml
+/target/classes/log4j2.properties
+/target/test-classes/com/clark/runner/CucumberRunnerTest.class
+/target/test-classes/com/clark/runner/parallel/CucableJavaTemplate.class
+/target/test-classes/com/clark/stepDefinitions/CarrinhoCompras_Steps.class
+/target/test-classes/com/clark/stepDefinitions/Home_Steps.class
+/target/test-classes/com/clark/stepDefinitions/Hooks.class
