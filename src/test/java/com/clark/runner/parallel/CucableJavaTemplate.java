@@ -1,4 +1,4 @@
-package runner.parallel;
+package com.clark.runner.parallel;
 
 import static com.clark.config.ConfigurationManager.configuration;
 
@@ -10,8 +10,8 @@ import org.openqa.selenium.WebDriver;
 import com.clark.driver.DriverManager;
 import com.clark.driver.TargetFactory;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -21,9 +21,6 @@ import cucumber.api.junit.Cucumber;
         features = {"target/parallel/features/[CUCABLE:FEATURE].feature"},
         plugin = {"json:json/[CUCABLE:RUNNER].json"},
         monochrome = true
-		,tags = {
-					"~@ignore"
-		}
         	
 )
 public class CucableJavaTemplate {

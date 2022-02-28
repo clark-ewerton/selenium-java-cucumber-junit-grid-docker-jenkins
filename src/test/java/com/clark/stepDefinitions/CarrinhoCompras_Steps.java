@@ -1,8 +1,8 @@
-package stepDefinitions;
+package com.clark.stepDefinitions;
 
 import com.clark.page.ecommerce.CarrinhoComprasPage;
 
-import cucumber.api.java.pt.Entao;
+import io.cucumber.java.pt.Entao;
 
 public class CarrinhoCompras_Steps {
 

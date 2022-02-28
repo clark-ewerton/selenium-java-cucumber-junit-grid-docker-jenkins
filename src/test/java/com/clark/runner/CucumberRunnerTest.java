@@ -1,4 +1,4 @@
-package runner;
+package com.clark.runner;
 import static com.clark.config.ConfigurationManager.configuration;
 
 import org.junit.AfterClass;
@@ -9,15 +9,15 @@ import org.openqa.selenium.WebDriver;
 import com.clark.driver.DriverManager;
 import com.clark.driver.TargetFactory;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"stepDefinitions"},
-        tags = {"~@ignore"},
-        		plugin = { "pretty", "json:json/cucumber.json"}
+        glue = {"com.clark.stepDefinitions"},
+        tags = "not @ignore",
+        		plugin = { "pretty", "json:json/cucumber.json", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
         )
 public class CucumberRunnerTest {
 	
