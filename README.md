@@ -11,6 +11,75 @@ Cucumber Report being generated after the test execution above
 Parallel testing execution example with Docker Selenium
 ![Parallel testing execution example with Docker Selenium](selenium-grid-execution.gif)
 
+## Project Structure
+```bash
+selenium-test-automation-boilerplate/
+├─ .github/
+│  ├─ workflows/
+│  │  ├─ test-execution.yml
+├─ gradle/
+│  ├─ wrapper/
+│  │  ├─ gradle-wrapper.jar
+│  │  ├─ gradle-wrapper.properties
+├─ report/
+│  ├─ screenshot/
+├─ script/
+│  ├─ install_chrome.sh
+├─ src/
+│  ├─ main/
+│  │  ├─ java/
+│  │  │  ├─ io/
+│  │  │  │  ├─ github/
+│  │  │  │  │  ├─ tahanima/
+│  │  │  │  │  │  ├─ config/
+│  │  │  │  │  │  │  ├─ Configuration.java
+│  │  │  │  │  │  │  ├─ ConfigurationManager.java
+│  │  │  │  │  │  │  ├─ package-info.java
+│  │  │  │  │  │  ├─ data/
+│  │  │  │  │  │  │  ├─ login/
+│  │  │  │  │  │  │  │  ├─ LoginData.java
+│  │  │  │  │  │  │  ├─ BaseData.java
+│  │  │  │  │  │  │  ├─ package-info.java
+│  │  │  │  │  │  ├─ driver/
+│  │  │  │  │  │  │  ├─ BrowserFactory.java
+│  │  │  │  │  │  │  ├─ DriverManager.java
+│  │  │  │  │  │  │  ├─ package-info.java
+│  │  │  │  │  │  ├─ page/
+│  │  │  │  │  │  │  ├─ login/
+│  │  │  │  │  │  │  │  ├─ LoginPage.java
+│  │  │  │  │  │  │  ├─ product/
+│  │  │  │  │  │  │  │  ├─ ProductsPage.java
+│  │  │  │  │  │  │  ├─ BasePage.java
+│  │  │  │  │  │  │  ├─ BasePageFactory.java
+│  │  │  │  │  │  │  ├─ package-info.java.java
+│  │  │  │  │  │  ├─ report/
+│  │  │  │  │  │  │  ├─ ReportManager.java
+│  │  │  │  │  │  │  ├─ package-info.java
+│  │  ├─ resources/
+│  │  │  ├─ general.properties
+│  ├─ test/
+│  │  ├─ java/
+│  │  │  ├─ io/
+│  │  │  │  ├─ github/
+│  │  │  │  │  ├─ tahanima/
+│  │  │  │  │  │  ├─ login/
+│  │  │  │  │  │  │  ├─ LoginTest.java
+│  │  │  │  │  │  ├─ util/
+│  │  │  │  │  │  │  ├─ DataProviderUtil.java
+│  │  │  │  │  │  ├─ BaseTest.java
+│  │  │  │  │  │  ├─ TestListener.java
+│  │  ├─ resources/
+│  │  │  ├─ testData/
+│  │  │  │  ├─ login/
+│  │  │  │  │  ├─ login.csv
+├─ .gitignore
+├─ build.gradle
+├─ gradlew
+├─ gradlew.bat
+├─ README.md
+├─ settings.gradle
+```
+
 ## Languages and Frameworks
 
 This project using the following languages and frameworks:
