@@ -93,9 +93,9 @@ The `getOptions()` is also used for the remote execution as it is a subclass of 
 automatically accepted as either a `Capabilities` or `MutableCapabilities` class, which is required by the `RemoteWebDriver` class.
 
 #### Logging
-All the log is done by the Log4J using the @Log4j2 annotation.
+All the log is done by the Log4J using the `@Log4j2` annotation.
 
-The log4j2.properties has two strategies: console and file. A file with all the log information will be automatically created on the user folder with test_automation.log filename. If you want to change it, update the appender.file.fileName property value.
+The `log4j2.properties` has two strategies: console and file. A file with all the log information will be automatically created on the user folder with `test_automation.log` filename. If you want to change it, update the `appender.file.fileName` property value.
 
 ### Sequential execution
 If you want to execute your selenium web tests in a stardand way, all you have to do is to run the class 'CucumberRunnerTest' as 'JUnit Tests'. This class implements the calling to Cucumber Plugin and its 'Steps Classes'. Moreover, has the pre (setup) and post (teardown) conditions. 
@@ -121,6 +121,10 @@ In 'cucable-plugin', make sure to point to the correct directory that evidences 
 On this way, to execute the tests in parallel mode, use the command bellow in Maven:
 
 `verify -Dthreads=8` (As threads is passed by a parameter to maven-failsafe-plugin. Also 8 is the maximmum number of threads that you can do open locally to execute the tests at the same time).
+
+
+### Screenshots
+After the test's execution, if there's an error in some scenario, so all the screenshots's images will be logged on "Screenshots" directory of the project.
 
 
 #### Execution with Docker Selenium Distributed
