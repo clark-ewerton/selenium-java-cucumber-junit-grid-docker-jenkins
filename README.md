@@ -123,7 +123,7 @@ On this way, to execute the tests in parallel mode, use the command bellow in Ma
 `verify -Dthreads=8` (As threads is passed by a parameter to maven-failsafe-plugin. Also 8 is the maximmum number of threads that you can do open locally to execute the tests at the same time).
 
 
-### Screenshots
+#### Screenshots
 After the test's execution, if there's an error in some scenario, so all the screenshots's images will be logged on "Screenshots" directory of the project.
 
 
