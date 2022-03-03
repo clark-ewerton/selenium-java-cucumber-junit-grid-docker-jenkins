@@ -1,5 +1,7 @@
 # Project to demonstrate knowledge in tools such as Selenium + Java + Cucumber + Junit + Docker + Grid (Parallel Testing) + Jenkins + Cucumber Report
 
+Don't forget to give this project a ⭐
+
 For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: http://automationpractice.com/index.php
 
 Local testing execution example
