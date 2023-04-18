@@ -210,4 +210,4 @@ without have a lot of properties inside a single file.
 
 * Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline. 
 Bear in mind that this jenkins file is considering to use Windows as environment, if you try to set up a jenkins from Docker using Linux, it may not run. On Jenkins is very important to configure JDK as 8 and also Maven. Moreover, you need to create a pipeline that points to the jenkins file, on the Internet there are tutorials teaching how to do that. On top of that, you need to install a plugin from Cucumber Report on the Jenkins.
-![pipeline_jenkins_example](cucumber-report.gif)
+![pipeline_jenkins_example](pipeline_jenkins_example.png)
