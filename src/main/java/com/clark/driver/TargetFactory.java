@@ -62,6 +62,7 @@ public class TargetFactory {
     	 ChromeOptions chromeOptions = new ChromeOptions();
          chromeOptions.addArguments("--disable-infobars");
          chromeOptions.addArguments("--disable-notifications");
+        chromeOptions.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
          chromeOptions.setHeadless(configuration().headless());
     	DesiredCapabilities capabilities = new DesiredCapabilities();
     	capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);

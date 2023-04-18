@@ -193,7 +193,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<sourceRunnerTemplateFile>src/test/java/runner/parallel/CucableJavaTemplate.java</sourceRunnerTemplateFile>
+					<sourceRunnerTemplateFile>src/test/java/com/clark/runner/parallel/CucableJavaTemplate.java</sourceRunnerTemplateFile>
 					<sourceFeatures>src/test/resources/features/</sourceFeatures>
 					<generatedFeatureDirectory>${generated.feature.directory}</generatedFeatureDirectory>
 					<generatedRunnerDirectory>${generated.runner.directory}</generatedRunnerDirectory>

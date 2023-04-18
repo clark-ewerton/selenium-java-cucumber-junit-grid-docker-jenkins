@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		glue = {			
-				"stepDefinitions"
+				"com.clark.stepDefinitions"
 				},
         features = {"target/parallel/features/[CUCABLE:FEATURE].feature"},
         plugin = {"json:json/[CUCABLE:RUNNER].json"},

@@ -62,6 +62,7 @@ public enum BrowserFactory {
             //chromeOptions.addArguments(START_MAXIMIZED);
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.addArguments("--disable-notifications");
+            chromeOptions.addArguments("--remote-allow-origins=*");
             chromeOptions.setHeadless(configuration().headless());
 
             return chromeOptions;
