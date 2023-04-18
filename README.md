@@ -2,7 +2,7 @@
 
 Don't forget to give this project a ⭐
 
-For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: http://automationpractice.com/index.php
+For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: https://www.carrinhomagico.com.br/collections/all
 
 Local testing execution example
 ![Local testing execution example](example_local_testing_execution.gif)
@@ -68,7 +68,7 @@ selenium-java-cucumber-junit-grid-docker-jenkins/
 
 This project using the following languages and frameworks:
 
-* [Java 8](https://openjdk.java.net/projects/jdk8/) as the programming language
+* [Java 8](https://openjdk.java.net/projects/jdk8/) as the programming language (make sure you have this version installed on your machine and IDE)
 * [JUnit 4](https://junit.org/junit4/) as the UnitTest framework to support the test creation
 * [Selenium WebDriver](https://www.selenium.dev/) as the web browser automation framework
 * [Cucumber](https://cucumber.io/) as the tool that supports Behaviour-Driven Development(BDD) making out tests more describable
@@ -186,10 +186,11 @@ To be able to run it in parallel the file
 
 Please not you need the following before run it in parallel:
 * Docker installed
+* Open CMD and go to the directory where the docker file is.
 * Start the Grid running the following command as for example:
   * `docker-compose up -d --scale chrome=2` 
 
-In the case above, to see in fact the concept of parallel testing working on your machine locally, it creates 2 nodes (machines) - each one with a instance of a chrome - and both will be used.
+In the case above, to see in fact the concept of parallel testing working on your machine locally, it creates 2 nodes (machines) - each one with a instance of a chrome - and both will be used. You can open the URL http://localhost:4444/ui/index.html#/sessions to see it happening.
 
 ### Configuration files
 This project uses a library called [Owner](http://owner.aeonbits.org/). You can find the class related to the property 
@@ -207,4 +208,5 @@ without have a lot of properties inside a single file.
 
 ### Pipeline as a code
 
-* Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline.
+* Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline. 
+Bear in mind that this jenkins file is considering to use Windows as environment, if you try to set up a jenkins from Docker using Linux, it may not run. On Jenkins is very important to configure JDK as 8 and also Maven. Moreover, you need to create a pipeline that points to the jenkins file, on the Internet there are tutorials teaching how to do that. On top of that, you need to install a plugin from Cucumber Report on the Jenkins.
