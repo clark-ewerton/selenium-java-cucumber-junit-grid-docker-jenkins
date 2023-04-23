@@ -3,6 +3,8 @@ package com.clark.page.ecommerce;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +14,7 @@ import com.clark.page.AbstractPageObject;
 
 public class HomePage extends AbstractPageObject {
 
+    private static final Logger log = LogManager.getLogger(HomePage.class);
 	static List<WebElement> webEleList;
 
 	public List<WebElement> deveVerificarProdutos(String opcao) {
@@ -22,8 +25,8 @@ public class HomePage extends AbstractPageObject {
 
 			webEleList = DriverManager.getDriver().findElements(By.xpath("//div[@class='discount']/p[starts-with(text(),'-')]"));
 			for (WebElement elemento : webEleList) {
-				System.out.println("Produto sem desconto: " + elemento.findElement(By.xpath("./../../../..//a")).getText());
-				System.out.println("Desconto: " + elemento.getText());
+				 log.info("Produto sem desconto: " + elemento.findElement(By.xpath("./../../../..//a")).getText());
+                 log.info("Desconto: " + elemento.getText());
 			}
 			break;
 
@@ -33,13 +36,13 @@ public class HomePage extends AbstractPageObject {
 
 			webEleList = DriverManager.getDriver().findElements(By.xpath("//div[@class='discount']/p[not(starts-with(text(),'-'))]\n"));
 			for (WebElement elemento : webEleList) {
-				System.out.println("Produto com desconto: " + elemento.findElement(By.xpath("./../../../..//a")).getText());
-				System.out.println("Desconto: " + elemento.getText());
+				 log.info("Produto com desconto: " + elemento.findElement(By.xpath("./../../../..//a")).getText());
+                 log.info("Desconto: " + elemento.getText());
 			}
 			break;
 
 		default:
-			System.err.println("Opcao nao encontrada!");
+			 log.error("Opção não encontrada!");
 			break;
 		}
 
@@ -56,6 +59,7 @@ public class HomePage extends AbstractPageObject {
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
+                log.error("Não foi possível localizar o elemento", e);
 				Assert.fail("It wasn't possible to locate element");
 			}
 

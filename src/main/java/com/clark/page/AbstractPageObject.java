@@ -25,7 +25,10 @@
 package com.clark.page;
 
 import java.time.Duration;
+import java.util.Arrays;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -36,6 +39,7 @@ import com.clark.driver.DriverManager;
 
 public class AbstractPageObject {
 
+    private static final Logger log = LogManager.getLogger(AbstractPageObject.class);
 	protected static WebDriverWait wait;
 
 	protected AbstractPageObject() {
@@ -43,15 +47,18 @@ public class AbstractPageObject {
 	}
 
 	public WebElement procurarElemento(By elemento) {
+		log.info("Procurando elemento: " + elemento);
 		return DriverManager.getDriver().findElement(elemento);
 	}
 
 	public void preencherCampo(By elemento, CharSequence... texto) {
+        log.info("Preenchendo campo: " + elemento + " com texto: " + Arrays.toString(texto));
 		procurarElemento(elemento).clear();
 		procurarElemento(elemento).sendKeys(texto);
 	}
 
 	public Boolean esperaElementoParaInteragir(By locator) {
+        log.info("Esperando por elemento: " + locator);
 		Boolean elementExists = false;
 		Duration tempo = Duration.ofSeconds(10, 10);
 		wait = new WebDriverWait(DriverManager.getDriver(), tempo);
@@ -65,6 +72,7 @@ public class AbstractPageObject {
 	}
 
 	public void clicarElementoViaJavaScript(WebElement element){
+        log.info("Clicando no elemento via JavaScript: " + element);
 		JavascriptExecutor executor = (JavascriptExecutor)DriverManager.getDriver();
 		executor.executeScript("arguments[0].click();", element);
 	}
