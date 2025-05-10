@@ -6,11 +6,19 @@ pipeline{
                 sh 'mvn clean install -DskipTests=true'
             }
 			}
- 	  stage('Subir Selenium Grid com Dois Nodes em Chrome'){
-            steps{
-				sh 'docker-compose up -d --scale chrome=2'
+
+	            stage('Checkout') {
+            steps {
+                git url: 'https://github.com/seu-usuario/seu-repo.git', branch: 'main'
             }
-			}
+        }
+
+        stage('Subir Selenium Grid com Dois Nodes em Chrome') {
+            steps {
+                dir("${env.WORKSPACE}") {
+                    sh 'docker-compose up -d --scale chrome=2'
+                }
+            }
 			
 	  stage('Rodar testes funcionais em paralelo'){
             steps{
