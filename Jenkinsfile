@@ -7,16 +7,11 @@ pipeline{
             }
 			}
 
-	            stage('Checkout') {
-            steps {
-                git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
-            }
-        }
-
         stage('Subir Selenium Grid com Dois Nodes em Chrome') {
             steps {
+		git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
                 dir("${env.WORKSPACE}") {
-                    sh 'docker-compose up -d --scale chrome=2'
+                    sh 'sh 'docker-compose -p selenium_${BUILD_NUMBER} up -d --scale chrome=2'
                 }
             }
 	}	
