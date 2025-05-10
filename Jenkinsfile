@@ -11,7 +11,7 @@ pipeline{
             steps {
 		git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
                 dir("${env.WORKSPACE}") {
-                    sh 'sh 'docker-compose -p selenium_${BUILD_NUMBER} up -d --scale chrome=2'
+                    sh 'docker-compose -p selenium_${BUILD_NUMBER} up -d --scale chrome=2'
                 }
             }
 	}	
