@@ -9,7 +9,7 @@ pipeline{
 
 	            stage('Checkout') {
             steps {
-                git url: 'https://github.com/seu-usuario/seu-repo.git', branch: 'main'
+                git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
             }
         }
 
