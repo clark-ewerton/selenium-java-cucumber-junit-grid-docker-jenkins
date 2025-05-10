@@ -19,7 +19,7 @@ pipeline{
                     sh 'docker-compose up -d --scale chrome=2'
                 }
             }
-			
+	}	
 	  stage('Rodar testes funcionais em paralelo'){
             steps{
 				sh 'mvn verify -Dthreads=8'
