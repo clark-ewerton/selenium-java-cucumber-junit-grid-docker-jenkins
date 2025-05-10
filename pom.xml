@@ -180,7 +180,7 @@
 			<plugin>
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cucable-plugin</artifactId>
-				<version>1.9.0</version>
+				<version>3.11.1</version>
 				<executions>
 					<execution>
 						<id>generate-test-resources</id>
