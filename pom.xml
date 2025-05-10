@@ -102,7 +102,7 @@
 				<!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cluecumber-report-plugin</artifactId>
-				<version>1.10.2</version>
+				<version>3.11.0</version>
 				<executions>
 					<execution>
 						<id>report</id>
