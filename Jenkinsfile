@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    environment {
         MAVEN_OPTS = "--add-opens java.base/java.util=ALL-UNNAMED"
         JSON_DIR = "${WORKSPACE}/json"
     }
