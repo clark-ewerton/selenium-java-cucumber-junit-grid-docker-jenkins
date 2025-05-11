@@ -29,7 +29,7 @@ stage('Subir Selenium Grid com Dois Nodes em Chrome') {
                 """
 
                 echo "Subindo selenium grid com 2 nós Chrome"
-                sh "docker-compose -p ${projectName} -f docker-compose-v3-dynamic-grid.yml up -d --scale chrome=2"
+                sh "docker compose -p ${projectName} up -d --scale chrome=2"
             }
         }
     }
