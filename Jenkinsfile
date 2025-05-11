@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    docker {
-        image 'openjdk:8-jdk' // Imagem com o JDK 8
-        args '-v $HOME/.m2:/root/.m2' // (Opcional) Usa o cache local do Maven
-    }
     stages {
         stage('Build do projeto Web com Selenium') {
             steps {
