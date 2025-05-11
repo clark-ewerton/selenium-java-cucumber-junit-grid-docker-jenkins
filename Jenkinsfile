@@ -22,7 +22,7 @@ stage('Subir Selenium Grid com Dois Nodes em Chrome') {
                     echo "Verificando se container 'selenium-hub' já existe..."
                     if docker ps -a --format '{{.Names}}' | grep -w selenium-hub > /dev/null; then
                       echo "Container já existe. Fazendo docker-compose down..."
-                      docker-compose -p ${projectName} -f docker-compose-v3-dynamic-grid.yml down
+                      docker-compose -p ${projectName} -f docker-compose.yml down
                     else
                       echo "Container não existe. Tudo certo para subir."
                     fi
