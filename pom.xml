@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>4.4.1</version>
+			<version>5.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -102,7 +102,7 @@
 				<!-- https://mvnrepository.com/artifact/com.trivago.rta/cluecumber-report-plugin -->
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cluecumber-report-plugin</artifactId>
-				<version>2.9.4</version>
+				<version>1.10.2</version>
 				<executions>
 					<execution>
 						<id>report</id>
@@ -180,7 +180,7 @@
 			<plugin>
 				<groupId>com.trivago.rta</groupId>
 				<artifactId>cucable-plugin</artifactId>
-				<version>1.13.0</version>
+				<version>1.9.0</version>
 				<executions>
 					<execution>
 						<id>generate-test-resources</id>
@@ -268,5 +268,3 @@
 	</build>
 
 </project>
-
-

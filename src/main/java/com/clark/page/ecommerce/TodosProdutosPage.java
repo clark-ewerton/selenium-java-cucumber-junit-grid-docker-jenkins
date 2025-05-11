@@ -21,8 +21,8 @@ public class TodosProdutosPage extends AbstractPageObject {
     private static final Logger log = LogManager.getLogger(TodosProdutosPage.class);
 
 	public void deveAcessarPaginaTodosOsProdutos(){
-        log.info("Acessando a página de todos os produtos: https://www.carrinhomagico.com.br/collections/all");
-		DriverManager.getDriver().get("https://www.carrinhomagico.com.br/collections/all");
+        log.info("Acessando a página de todos os produtos: https://adasdsacarrinhomagico.mycartpanda.com/collections/all");
+		DriverManager.getDriver().get("https://adasdsacarrinhomagico.mycartpanda.com/collections/all");
 	}
 
 	public void deveFinalizarCompra() throws InterruptedException {
