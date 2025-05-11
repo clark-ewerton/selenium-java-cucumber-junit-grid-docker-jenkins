@@ -1,12 +1,14 @@
 pipeline {
     agent any
-    stages {
-        stage('Build do projeto Web com Selenium') {
-               steps {
-        sh 'export MAVEN_OPTS="--add-opens java.base/java.util=ALL-UNNAMED" && mvn clean install -DskipTests=true'
+        MAVEN_OPTS = "--add-opens java.base/java.util=ALL-UNNAMED"
+        JSON_DIR = "${WORKSPACE}/json"
     }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean install -DskipTests=true'
+            }
         }
-
         stage('Subir Selenium Grid com Dois Nodes em Chrome') {
             steps {
                 git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
