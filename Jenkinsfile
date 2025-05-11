@@ -16,23 +16,25 @@ stage('Subir Selenium Grid com Dois Nodes em Chrome') {
 
         dir("${env.WORKSPACE}") {
             script {
-                def projectName = "selenium_${BUILD_NUMBER}"
+                def projectName = "selenium_5" // ou use BUILD_NUMBER se quiser um nome dinâmico
 
-                // Verifica se já existe o container selenium-hub e derruba se necessário
                 sh """
-                    echo "Verificando containers existentes..."
-                    if [ \$(docker ps -a --format '{{.Names}}' | grep -w 'selenium-hub' | wc -l) -gt 0 ]; then
-                        echo "Container selenium-hub já existe. Removendo com docker-compose down..."
-                        docker-compose -p selenium_5 down || true
+                    echo "Verificando se container 'selenium-hub' já existe..."
+                    if docker ps -a --format '{{.Names}}' | grep -w selenium-hub > /dev/null; then
+                      echo "Container já existe. Fazendo docker-compose down..."
+                      docker-compose -p ${projectName} -f docker-compose-v3-dynamic-grid.yml down
+                    else
+                      echo "Container não existe. Tudo certo para subir."
                     fi
                 """
 
-                // Agora sobe o grid com chrome em escala 2
-                sh "docker-compose -p ${projectName} up -d --scale chrome=2"
+                echo "Subindo selenium grid com 2 nós Chrome"
+                sh "docker-compose -p ${projectName} -f docker-compose-v3-dynamic-grid.yml up -d --scale chrome=2"
             }
         }
     }
 }
+
 
         stage('Rodar testes funcionais em paralelo') {
             steps {
