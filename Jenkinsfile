@@ -11,6 +11,7 @@ pipeline {
             }
         }
         stage('Rodar testes funcionais em paralelo') {
+            withEnv(['MAVEN_OPTS=--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED'])
             steps {
                 sh 'mvn verify -Dthreads=8'
             }
