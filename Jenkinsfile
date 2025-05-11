@@ -2,9 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Build do projeto Web com Selenium') {
-            steps {
-                sh 'mvn clean install -DskipTests=true'
-            }
+               steps {
+        sh 'export MAVEN_OPTS="--add-opens java.base/java.util=ALL-UNNAMED" && mvn clean install -DskipTests=true'
+    }
         }
 
         stage('Subir Selenium Grid com Dois Nodes em Chrome') {
