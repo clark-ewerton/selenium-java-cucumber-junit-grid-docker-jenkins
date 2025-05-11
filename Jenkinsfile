@@ -10,30 +10,6 @@ pipeline {
                 sh 'mvn clean install -DskipTests=true'
             }
         }
-stage('Subir Selenium Grid com Dois Nodes em Chrome') {
-    steps {
-        git url: 'https://github.com/clark-ewerton/selenium-java-cucumber-junit-grid-docker-jenkins.git', branch: 'master'
-
-        dir("${env.WORKSPACE}") {
-            script {
-                def projectName = "selenium_5" // ou use BUILD_NUMBER se quiser um nome dinâmico
-
-               sh '''
-    echo "Verificando se o container 'selenium-hub' já existe..."
-    if [ $(docker ps -a --format "{{.Names}}" | grep -w selenium-hub | wc -l) -gt 0 ]; then
-        echo "Container 'selenium-hub' já existe. Removendo..."
-        docker rm -f selenium-hub
-    fi
-
-    echo "Subindo selenium grid com 2 nós Chrome..."
-    docker-compose -p selenium_${BUILD_NUMBER} up -d --scale chrome=2
-'''
-            }
-        }
-    }
-}
-
-
         stage('Rodar testes funcionais em paralelo') {
             steps {
                 sh 'mvn verify -Dthreads=8'
