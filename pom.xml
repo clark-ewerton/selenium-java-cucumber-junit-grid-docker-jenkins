@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<cucumber.report.json.location>${project.basedir}\json\</cucumber.report.json.location>
+		<cucumber.report.json.location>${project.basedir}/json/</cucumber.report.json.location>
 		<generated.report.location>${project.build.directory}\cluecumber-report</generated.report.location>
 		<maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
 		<maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
