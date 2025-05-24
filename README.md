@@ -1,8 +1,10 @@
-# Project to demonstrate knowledge in tools such as Selenium + Java + Cucumber + Junit + Docker + Grid (Parallel Testing) + Jenkins + Cucumber Report
+# Project to demonstrate knowledge in tools such as Selenium + Java 8 + Cucumber + Junit 4 + Docker + Grid (Parallel Testing) + Jenkins (Windows) + Cucumber Report
 
 Don't forget to give this project a ⭐
 
-For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: https://www.carrinhomagico.com.br/collections/all
+⚠️ Considerations: this project is out to date because is using old technologies such as Junit 4 and Java 8 (this project will only work with these versions) okay? Moreover, it also uses a deprecated library called Cucable to run in parallel the Cucumber Runners (nowadays there're ways more simples to run a e2e testing using cucumber in paralell). Anyway it'll be here as a model.
+
+For this project, it was took into account the Windows as main environment! Also I'm using a testing ecommerce Website: https://adasdsacarrinhomagico.mycartpanda.com/collections/all
 
 Local testing execution example
 ![Local testing execution example](example_local_testing_execution.gif)
@@ -209,5 +211,5 @@ without have a lot of properties inside a single file.
 ### Pipeline as a code
 
 * Jenkins: `Jenkinsfile` to be used on a Jenkins pipeline. 
-Bear in mind that this jenkins file is considering to use Windows as environment, if you try to set up a jenkins from Docker using Linux, it may not run. On Jenkins is very important to configure JDK as 8 and also Maven. Moreover, you need to create a pipeline that points to the jenkins file, on the Internet there are tutorials teaching how to do that. On top of that, you need to install a plugin from Cucumber Report on the Jenkins.
+Bear in mind that this jenkins file is considering to use Windows as environment, if you try to set up a jenkins from Docker using Linux, it may not run (because the latest image of Jenkins from Docker considers Java 17, in this case it wouldn't work with this project okay?). So just download and install manually Jenkins to your Windows env. On Jenkins is very important to configure JDK as 8 and also Maven. Moreover, you need to create a pipeline that points to the jenkins file, there are tutorials on internet teaching how to create a pipeline from SCM. On top of that, you also need to install a plugin from Cucumber Report on the Jenkins.
 ![pipeline_jenkins_example](pipeline_jenkins_example.png)
